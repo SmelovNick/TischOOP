@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TischOOP
+﻿namespace TischOOP
 {
     class SmallApartment : House
     {
 
-        public SmallApartment()
+        public SmallApartment() : base()
         {
-            area = 50;
+            _area = 50;
         }
         public SmallApartment(string doorColor)
         {
-            area = 50;
-            door.Color = doorColor;
+            _area = 50;
+            _door.Color = doorColor;
         }
     }
 }
