@@ -17,6 +17,11 @@ namespace TischOOP
                 return _area;
             } 
         }
+        public Door Door
+        {
+            set { _door = value; }
+            get { return _door; }
+        }
         public House() { }
         public House(string doorColor) { _door.Color = doorColor; }
         public House(int area, string doorColor)
@@ -29,11 +34,7 @@ namespace TischOOP
             Console.WriteLine("I am a house, my area is {0} m2", _area);
         }
 
-        public Door Door
-        {
-            set { _door = value; }
-            get { return _door; }
-        }
+
     }
     public struct Door
     {
