@@ -1,56 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TischOOP
 {
     class House
     {
-        private protected int area;
-        private protected Door door;
+        private protected int _area;
+        private protected Door _door;
         public int Area 
         { 
             set 
             {
-                if (value > 0) area = value;
+                if (value > 0) _area = value;
             } 
             get 
             {
-                return area;
+                return _area;
             } 
         }
+        public Door Door
+        {
+            set { _door = value; }
+            get { return _door; }
+        }
         public House() { }
-        public House(string doorColor) { door.Color = doorColor; }
+        public House(string doorColor) { _door.Color = doorColor; }
         public House(int area, string doorColor)
         {
-            this.area = area;
-            door.Color = doorColor;
+            this._area = area;
+            _door.Color = doorColor;
         }
         public void ShowData() 
         {
-            Console.WriteLine("I am a house, my area is {0} m2", area);
+            Console.WriteLine("I am a house, my area is {0} m2", _area);
         }
 
-        public Door GetDoor() 
-        {
-            return door;
-        }
+
     }
     public struct Door
     {
-        private String color;
+        private String _color;
         public string Color
         {
             get
             {
-                return color;
+                return _color;
             }
-            set { color = value; }
+            set { _color = value; }
         }
 
         public void ShowData()
         {
-            Console.WriteLine("I am a door, my color is {0}", color);
+            Console.WriteLine("I am a door, my color is {0}", _color);
         }
     }
 }

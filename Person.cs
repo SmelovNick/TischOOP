@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TischOOP
 {
     class Person
     {
-        string name;
-        House house;
+        private string _name;
+        private House _house;
 
         public Person(string name, House house) 
         {
-            this.name = name;
-            this.house = house;
+            this._name = name;
+            this._house = house;
         }
         public void ShowData() 
         {
-            Console.WriteLine("Name: {0} \nArea: {1}\nDoor Color: {2}", name, house.Area, house.GetDoor().Color);
+            Console.WriteLine("Name: {0} \nArea: {1}\nDoor Color: {2}", _name, _house.Area, _house.Door.Color);
+            _house.ShowData();
+            _house.Door.ShowData();
         }
     }
 }

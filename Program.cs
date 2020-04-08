@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TischOOP
+﻿namespace TischOOP
 {
     class Program
     {
@@ -12,7 +10,6 @@ namespace TischOOP
             House flat2 = new House(200, "black");
             Person ivan = new Person("ivan", flat2);
             ivan.ShowData();
-            House flat3 = new SmallApartment();
         }
     }
 }
